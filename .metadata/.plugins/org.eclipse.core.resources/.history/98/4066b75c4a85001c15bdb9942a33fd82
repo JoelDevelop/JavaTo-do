@@ -1,0 +1,5 @@
+package com.jdev.dao;
+
+public class ActividadDAO {
+
+}

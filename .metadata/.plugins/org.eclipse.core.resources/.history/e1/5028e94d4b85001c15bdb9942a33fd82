@@ -1,0 +1,25 @@
+package com.jdev.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jdev.dao.ActividadDAO;
+import com.jdev.model.Actividad;
+
+@RestController
+@RequestMapping("activadades")
+public class ActividadRest {
+	
+	@Autowired
+	private ActividadDAO actividadDAO;
+	
+	//Solicitudes al Servidor
+	
+	@PostMapping("/grabar")
+	public void grabar(Actividad actividad) {
+		actividadDAO.save();
+	}
+	
+}
